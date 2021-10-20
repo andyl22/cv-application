@@ -1,0 +1,28 @@
+.form-container, .full-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  width: 70%;
+  background: white;
+  height: 100%;
+}
+
+.form-container h1 {
+  padding: 30px 0px 0px 0px;
+}
+
+.full-form {
+  height: 100%;
+  width: 100%;
+  padding: 30px 0px;
+  gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .form-container{
+    width: 100%;
+  }
+}

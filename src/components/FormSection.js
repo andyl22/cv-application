@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import Input from './Input';
+import '../styles/FormSection.css'
 
 class FormSection extends Component {
-  constructor(props) {
-    super(props);
-  }
-
 
   render() {
+    const mappedInputElements = this.props.inputs.map(
+      inputData => <Input key={inputData[1]} type={inputData[0]} handleChange={this.props.handleChange} id={inputData[1]} ></Input>
+      );
+
     return (
       <div className='form-section'>
-        <Input type='text' handleChange={this.props.handleChange} id='name'/>
-        <Input type='text' handleChange={this.props.handleChange} id='email'/>
-        <Input type='text' handleChange={this.props.handleChange} id='phone'/>
+        {mappedInputElements}
       </div>
     )
   }
