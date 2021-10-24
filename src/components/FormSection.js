@@ -9,6 +9,7 @@ function FormSection(props) {
       id={inputName} 
       key={inputName} 
       type={inputType}
+      onChange={props.onChange}
       />;
   });
 

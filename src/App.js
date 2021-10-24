@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Form from './components/Form';
 import './styles/App.css'
 import TextFormSection from './components/TextFormSection.js';
@@ -8,11 +8,12 @@ import TextFormSection from './components/TextFormSection.js';
 
 function App() {
 
-  useEffect(() => {
-      console.log(document.getElementsByTagName("input"))
-    },
-    []
-  )
+  const [state, setState] = useState({name: "", email: "", phone: ""})
+  function onChange(e) {
+    const {name, value} = e.target
+    setState(prevState => ({...prevState, [name] : value}))
+    console.log(state)
+  }
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -25,14 +26,14 @@ function App() {
   if (!submitted) {
     return (
       <div className="App">
-        <Form handleSubmit={handleSubmit} />
+        <Form handleSubmit={handleSubmit} onChange={onChange}/>
       </div>
     );
   }
 
   return (
     <div className="App">
-      <TextFormSection/>
+      <TextFormSection data={state}/>
     </div>
   )
     

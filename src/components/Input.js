@@ -3,12 +3,14 @@ import '../styles/Input.css';
 
 function Input(props) {
 
+
   return (
     <div className='input-container'>
       <label htmlFor={props.id}>{props.id}</label>
       <input 
         type={props.type} 
-        id={props.id}
+        name={props.id}
+        onChange={props.onChange}
       />
       </div>
     )

@@ -25,12 +25,15 @@ function Form(props) {
       <form className="full-form" onSubmit={props.handleSubmit}>
         <FormSection
           inputs={firstSection}
+          onChange={props.onChange}
         />
         <FormSection
           inputs={secondSection}
+          onChange={props.onChange}
         />
         <FormSection
           inputs={thirdSection}
+          onChange={props.onChange}
         />
         <input type="submit" />
       </form>
