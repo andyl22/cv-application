@@ -30,5 +30,16 @@ input[type=submit]:hover {
   cursor: pointer;
   background: rgb(255, 255, 255);
   box-shadow: 0px 0px 2px 0px black;
-  height: 50px;
+}
+
+@media (max-width: 800px) {
+  input {
+    width: 100px;
+    height: 12px;
+  }
+
+  input[type=submit] {
+    height: 35px;
+    width: 130px;
+  }
 }

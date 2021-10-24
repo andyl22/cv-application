@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import '../styles/Input.css';
 
-class Input extends Component {
+function Input(props) {
 
-  render() {
-    return (
-      <div className='input-container'>
-        <label htmlFor={this.props.id}>{this.props.id}</label>
-        <input type={this.props.type} id={this.props.id} onChange={(e) => this.props.handleChange(e, this.props)}/>
+  return (
+    <div className='input-container'>
+      <label htmlFor={props.id}>{props.id}</label>
+      <input 
+        type={props.type} 
+        id={props.id}
+      />
       </div>
     )
-  }
 }
 
 export default Input;
