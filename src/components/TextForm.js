@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Form.css';
+import '../styles/TextForm.css';
 
 function TextForm(props) {
   console.log(props)

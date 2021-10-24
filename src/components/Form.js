@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FormSection from "./FormSection";
 import "../styles/Form.css";
 
@@ -9,14 +9,14 @@ function Form(props) {
     ["text", "phone"],
   ];
   const secondSection = [
-    ["text", "name2"],
-    ["text", "email2"],
-    ["text", "phone2"],
+    ["text", "job"],
+    ["text", "current company"],
+    ["text", "years of employment"],
   ];
   const thirdSection = [
-    ["text", "name3"],
-    ["text", "email3"],
-    ["text", "phone3"],
+    ["text", "technical skills"],
+    ["text", "soft skills"],
+    ["text", "languages"],
   ];
 
   return (

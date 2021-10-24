@@ -8,7 +8,7 @@ import TextFormSection from './components/TextFormSection.js';
 
 function App() {
 
-  const [state, setState] = useState({name: "", email: "", phone: ""})
+  const [state, setState] = useState({name: "", email: "", phone: "", job: "", 'current company': "", 'years of employment': "", 'technical skills': "", 'soft skills': "", languages: "" })
   function onChange(e) {
     const {name, value} = e.target
     setState(prevState => ({...prevState, [name] : value}))

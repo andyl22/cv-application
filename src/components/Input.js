@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Input.css';
 
 function Input(props) {
-
+  const [name, type] = [props.id, props.type]
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
 
   return (
     <div className='input-container'>
-      <label htmlFor={props.id}>{props.id}</label>
+      <label htmlFor={name}>{capitalizedName}</label>
       <input 
-        type={props.type} 
-        name={props.id}
+        type={type} 
+        name={name}
         onChange={props.onChange}
       />
       </div>
